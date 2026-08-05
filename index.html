@@ -951,6 +951,51 @@
       .mosaic-tile.sq-b { display: none; }
       .marquee-item { width: 120px; height: 82px; }
     }
+    
+    .toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+    min-width:320px;
+    padding:18px 22px;
+    border-radius:18px;
+    backdrop-filter:blur(20px);
+    background:rgba(15,18,25,.82);
+    border:1px solid rgba(255,255,255,.08);
+    color:#fff;
+    display:flex;
+    gap:14px;
+    align-items:center;
+    z-index:99999;
+    transform:translateX(450px);
+    opacity:0;
+    transition:.45s cubic-bezier(.19,1,.22,1);
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+.toast.show{
+    transform:translateX(0);
+    opacity:1;
+}
+
+.toast.success{
+    border-left:4px solid #58d68d;
+}
+
+.toast.error{
+    border-left:4px solid #ff5b5b;
+}
+
+.toast .icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0;
+}
+
   </style>
 </head>
 <body>
@@ -1268,6 +1313,11 @@
     </div>
   </div>
 
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true">
+    <div class="icon">✓</div>
+    <div id="toastText"></div>
+  </div>
+
   <script>
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
@@ -1320,14 +1370,63 @@
       }
     }
 
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toastText');
+      if (!toast || !toastText) return;
+
+      toast.className = `toast ${type}`;
+      toast.querySelector('.icon').textContent = type === 'success' ? '✓' : '✕';
+      toastText.textContent = message;
+      toast.classList.add('show');
+
+      clearTimeout(window.__mtikToastTimer);
+      window.__mtikToastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
     /* ---------------- Contact form ---------------- */
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     if (contactForm && formSuccess) {
-      contactForm.addEventListener('submit', (e) => {
+      contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        contactForm.style.display = 'none';
-        formSuccess.classList.add('show');
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const data = {
+          name: document.getElementById('name').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          project: document.getElementById('type').value,
+          message: document.getElementById('message').value.trim()
+        };
+
+        try {
+          const response = await fetch('https://mtik-api.atinargesii.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (!response.ok) {
+              const error = await response.text();
+              console.log("Worker Error:", error);
+              showToast(error, "error");
+              throw new Error(error);
+          }
+
+          contactForm.reset();
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('show');
+
+          } catch (err) {
+              console.error(err);
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send inquiry';
+          }
       });
     }
 
