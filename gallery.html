@@ -4,8 +4,8 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090a0e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='32' fill='%23e3c284'%3EM%3C/text%3E%3C/svg%3E">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MTIK — premium cinematic video ads, motion branding, and a curated Dental, Plastic Surgery & Rhinoplasty portfolio." />
-  <title>MTIK — Premium Video Ads Studio</title>
+  <meta name="description" content="MTIK gallery — cinematic video ads, motion branding, and specialty campaign work." />
+  <title>MTIK — Gallery</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -809,31 +809,6 @@
       font-size: 0.95rem;
     }
 
-    .footer-meta {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-
-    .footer-block {
-      padding: 18px 0 2px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-label {
-      color: var(--gold-2);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.74rem;
-      margin-bottom: 10px;
-    }
-
-    .footer-text {
-      color: var(--text);
-      line-height: 1.8;
-    }
-
     .footer-inner {
       display: flex;
       align-items: center;
@@ -1021,6 +996,44 @@
     margin:0;
 }
 
+  
+
+    .footer-meta {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .footer-block {
+      padding: 18px 0 2px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-label {
+      color: var(--gold-2);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      margin-bottom: 10px;
+    }
+    .footer-text {
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .gallery-hero {
+      padding: 62px 0 20px;
+    }
+    .gallery-hero .hero-panel {
+      min-height: auto;
+      padding: 30px;
+    }
+    .gallery-hero .hero h1 {
+      max-width: 14ch;
+      font-size: clamp(2.8rem, 5vw, 5.2rem);
+    }
+    @media (max-width: 1100px) {
+      .footer-meta { grid-template-columns: 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -1029,14 +1042,14 @@
     <header class="nav">
       <div class="container">
         <div class="nav-inner">
-          <a class="brand" href="#top" aria-label="MTIK home">
+          <a class="brand" href="index.html#top" aria-label="MTIK home">
             <span class="brand-mark">M</span>
             <span>MTIK</span>
           </a>
           <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#work">Work</a>
+            <a href="gallery.html" aria-current="page">Gallery</a>
             <a href="contact.html">Contact Us</a>
           </nav>
           <div class="nav-right">
@@ -1050,178 +1063,42 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="gallery-hero">
         <div class="container">
-          <div class="hero-grid">
-            <div class="hero-panel">
-              <div>
-                <div class="eyebrow">Cinematic video ads • Luxury branding • Motion design</div>
-                <h1>Make them <em>stop</em> scrolling.</h1>
-                <p>
-                  MTIK creates premium ad films, patient stories, and motion-led brand experiences for clinics that want a sharper image, stronger conversions, and a look that feels expensive from the first frame.
-                </p>
-                <div class="specialty-row">
-                  <span class="specialty-pill"><span class="dot"></span>Dental</span>
-                  <span class="specialty-pill"><span class="dot"></span>Plastic Surgery</span>
-                  <span class="specialty-pill"><span class="dot"></span>Rhinoplasty</span>
-                </div>
-                <div class="hero-actions">
-                  <a class="btn btn-primary" href="contact.html">Book a creative call</a>
-                  <a class="btn btn-secondary" href="gallery.html">View the gallery</a>
-                </div>
-                <div class="mini-stats">
-                  <div class="stat"><strong>4K+</strong><span>Cinematic delivery</span></div>
-                  <div class="stat"><strong>3</strong><span>Specialties covered</span></div>
-                  <div class="stat"><strong>Fast</strong><span>Launch-ready builds</span></div>
-                </div>
-              </div>
-
-              <div class="hero-visual" aria-hidden="true">
-                <div class="mosaic" id="heroMosaic"></div>
-              </div>
-            </div>
-
-            <aside class="side-panel">
-              <h3>What MTIK creates</h3>
+          <div class="hero-panel">
+            <div>
+              <div class="eyebrow">Gallery</div>
+              <h1>Selected work, all in one place.</h1>
               <p>
-                A complete creative system for clinics that want their ads to feel like a flagship campaign — not a template.
+                Browse the full Dental, Plastic Surgery, and Rhinoplasty portfolio without lengthening the home page.
               </p>
-              <div class="list">
-                <div class="list-item">
-                  <div class="bullet"></div>
-                  <div><strong>Brand films</strong><span>Elegant story-driven videos that introduce a clinic like a luxury launch.</span></div>
-                </div>
-                <div class="list-item">
-                  <div class="bullet"></div>
-                  <div><strong>Case & result ads</strong><span>Short-form creatives built to perform on social, landing pages, and paid ads.</span></div>
-                </div>
-                <div class="list-item">
-                  <div class="bullet"></div>
-                  <div><strong>Motion identity</strong><span>Animated logos, transitions, and visual language for a polished premium presence.</span></div>
-                </div>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="contact.html">Start a project</a>
+                <a class="btn btn-secondary" href="index.html">Back to home</a>
               </div>
-            </aside>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="marquee-section" aria-label="Portfolio highlights">
-        <div class="container">
-          <div class="marquee-mask">
-            <div class="marquee-track" id="marqueeTrack"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services">
+      <section id="gallery">
         <div class="container">
           <div class="section-title reveal">
             <div>
-              <div class="eyebrow">Services</div>
-              <h2>Luxury-level production, built for modern clinics.</h2>
+              <div class="eyebrow">Portfolio</div>
+              <h2>Real results, three specialties, one standard of craft.</h2>
             </div>
-            <p>Everything is designed to feel sharp, minimal, and high-value.</p>
+            <p>Photo and video work across Dental, Plastic Surgery, and Rhinoplasty campaigns.</p>
           </div>
 
-          <div class="services-grid">
-            <article class="section-card reveal">
-              <div class="icon">✦</div>
-              <h3>Ad Creative Direction</h3>
-              <p>Concepts, moodboards, hooks, and campaign structure engineered for brand recall and conversion.</p>
-            </article>
-            <article class="section-card reveal">
-              <div class="icon">◌</div>
-              <h3>Cinematic Edit</h3>
-              <p>Fast pacing, premium typography, sound design, and elegant color treatment that feels high-end.</p>
-            </article>
-            <article class="section-card reveal">
-              <div class="icon">✧</div>
-              <h3>Web + Landing Pages</h3>
-              <p>Beautiful one-page launches and portfolio sites, fast to load and effortless to update.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="work">
-        <div class="container">
-          <div class="section-title reveal">
-            <div>
-              <div class="eyebrow">Selected work</div>
-              <h2>Designed to look expensive at first glance.</h2>
-            </div>
-            <p>A glimpse at the campaigns MTIK builds for clinic brands.</p>
+          <div class="gallery-tabs" id="galleryTabs">
+            <div class="gallery-tab active" data-filter="all">All Work</div>
+            <div class="gallery-tab" data-filter="dental">Dental</div>
+            <div class="gallery-tab" data-filter="plastic">Plastic Surgery</div>
+            <div class="gallery-tab" data-filter="rhinoplasty">Rhinoplasty</div>
           </div>
 
-          <div class="work-grid">
-            <article class="work-card reveal">
-              <div class="work-preview"><div class="shape"></div></div>
-              <h3>Luxury Clinic Launch</h3>
-              <p>A polished hero film for a premium clinic reveal with atmospheric motion and bold pacing.</p>
-              <div class="tag">Brand launch • 30 sec • Social & web</div>
-            </article>
-            <article class="work-card reveal">
-              <div class="work-preview"><div class="shape"></div></div>
-              <h3>Performance Ad System</h3>
-              <p>Short-form variations built for attention, click-through, and a clean premium feel.</p>
-              <div class="tag">Conversion • Patient stories • Multi-format</div>
-            </article>
-            <article class="work-card reveal">
-              <div class="work-preview"><div class="shape"></div></div>
-              <h3>Minimal Brand Film</h3>
-              <p>Quiet-luxury visuals, restrained typography, and a sophisticated visual rhythm.</p>
-              <div class="tag">Luxury aesthetic • Filmic • Editorial</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="process">
-        <div class="container">
-          <div class="section-title reveal">
-            <div>
-              <div class="eyebrow">Process</div>
-              <h2>Clear steps. Premium execution.</h2>
-            </div>
-            <p>No clutter, no confusion, just a focused workflow.</p>
-          </div>
-
-          <div class="process-grid">
-            <div class="process-step reveal"><div class="step-num">01</div><h3>Discovery</h3><p>Define the goal, audience, mood, and message of the campaign.</p></div>
-            <div class="process-step reveal"><div class="step-num">02</div><h3>Concept</h3><p>Shape a visual direction with strong hooks and a premium style system.</p></div>
-            <div class="process-step reveal"><div class="step-num">03</div><h3>Production</h3><p>Editing, animation, audio, and visual polish come together in one cohesive piece.</p></div>
-            <div class="process-step reveal"><div class="step-num">04</div><h3>Launch</h3><p>Final exports are optimized for social, web, and ad placements.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="section-title reveal">
-            <div>
-              <div class="eyebrow">Testimonials</div>
-              <h2>What clients should feel.</h2>
-            </div>
-            <p>Feedback from the clinics and creative teams we've partnered with.</p>
-          </div>
-
-          <div class="testimonials-grid">
-            <article class="testimonial reveal">
-              <p class="quote">“The clinic instantly looked more premium. The whole page feels like a luxury studio, not a basic business site.”</p>
-              <h3>Creative Director</h3>
-              <p>Brand launch campaign</p>
-            </article>
-            <article class="testimonial reveal">
-              <p class="quote">“Everything is clean, fast, and cinematic. It makes every case feel more valuable before the video even starts.”</p>
-              <h3>Marketing Lead</h3>
-              <p>Case ad system</p>
-            </article>
-            <article class="testimonial reveal">
-              <p class="quote">“This is the kind of website people remember. Minimal, expensive-looking, and very focused.”</p>
-              <h3>Clinic Founder</h3>
-              <p>Luxury aesthetics brand</p>
-            </article>
-          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
         </div>
       </section>
     </main>
@@ -1255,7 +1132,6 @@
               <a href="mailto:contact@mtikx.com">contact@mtikx.com</a>
             </div>
           </div>
-        </div>
         <div class="footer-inner">
           <div>© <span id="year"></span> MTIK. Crafted for a premium first impression.</div>
           <div class="socials">
@@ -1298,7 +1174,6 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* ---------------- Mobile nav ---------------- */
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     if (navToggle && navLinks) {
@@ -1316,7 +1191,6 @@
       window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
     }
 
-    /* ---------------- Scroll to top ---------------- */
     const scrollTopBtn = document.getElementById('scrollTop');
     const toggleScrollBtn = () => {
       if (window.scrollY > 600) scrollTopBtn.classList.add('show');
@@ -1326,7 +1200,6 @@
     toggleScrollBtn();
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    /* ---------------- Scroll reveal ---------------- */
     const revealEls = $$('.reveal');
     if (revealEls.length) {
       if ('IntersectionObserver' in window) {
@@ -1358,50 +1231,6 @@
       window.__mtikToastTimer = setTimeout(() => {
         toast.classList.remove('show');
       }, 3500);
-    }
-
-    /* ---------------- Contact form ---------------- */
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    if (contactForm && formSuccess) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-
-        const data = {
-          name: document.getElementById('name').value.trim(),
-          email: document.getElementById('email').value.trim(),
-          project: document.getElementById('type').value,
-          message: document.getElementById('message').value.trim()
-        };
-
-        try {
-          const response = await fetch('https://mtik-api.atinargesii.workers.dev', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-
-          if (!response.ok) {
-              const error = await response.text();
-              console.log("Worker Error:", error);
-              showToast(error, "error");
-              throw new Error(error);
-          }
-
-          contactForm.reset();
-          contactForm.style.display = 'none';
-          formSuccess.classList.add('show');
-
-          } catch (err) {
-              console.error(err);
-              submitBtn.disabled = false;
-              submitBtn.textContent = 'Send inquiry';
-          }
-      });
     }
 
     /* ---------------- Gallery data ---------------- */
@@ -1437,14 +1266,6 @@
       { category: 'rhinoplasty', type: 'video', src: 'assets/gallery/rhinoplasty/rhinoplasty-video-2.mp4', title: 'Patient Story Film', tag: 'Video Ad' },
     ];
 
-    const FEATURED_ITEMS = [
-      { src: 'assets/gallery/featured/featured-1.jpg', title: 'Featured case' },
-      { src: 'assets/gallery/featured/featured-2.jpg', title: 'Featured case' },
-      { src: 'assets/gallery/featured/featured-3.jpg', title: 'Featured case' },
-      { src: 'assets/gallery/featured/featured-4.jpg', title: 'Featured case' },
-    ];
-
-    /* ---------------- Lightbox ---------------- */
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modalTitle');
     const modalTag = document.getElementById('modalTag');
@@ -1483,7 +1304,6 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeLightbox(); });
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
-    /* ---------------- Media loaders ---------------- */
     function attachImage(el, src, onReady) {
       const probe = new Image();
       probe.onload = () => { el.src = src; el.classList.add('is-loaded'); onReady && onReady(true); };
@@ -1522,41 +1342,6 @@
       setTimeout(fail, 6000);
     }
 
-    /* ---------------- Hero mosaic ---------------- */
-    function renderMosaic() {
-      const wrap = document.getElementById('heroMosaic');
-      if (!wrap) return;
-      const zones = ['big', 'tall', 'sq-a', 'sq-b'];
-      wrap.innerHTML = FEATURED_ITEMS.map((item, i) => `
-        <div class="mosaic-tile ${zones[i] || ''}">
-          <img alt="${item.title}" data-src="${item.src}" />
-          <div class="tile-empty"><span class="empty-mark"></span></div>
-        </div>
-      `).join('');
-      $$('.mosaic-tile', wrap).forEach(tile => {
-        const img = tile.querySelector('img');
-        attachImage(img, img.dataset.src, (ok) => {
-          if (ok) tile.querySelector('.tile-empty').style.display = 'none';
-        });
-      });
-    }
-
-    /* ---------------- Marquee ---------------- */
-    function renderMarquee() {
-      const track = document.getElementById('marqueeTrack');
-      if (!track) return;
-      const items = GALLERY_ITEMS.filter(i => i.type === 'image');
-      const loop = [...items, ...items];
-      track.innerHTML = loop.map(item => `
-        <div class="marquee-item">
-          <img alt="${item.title}" data-src="${item.src}" />
-          <span class="m-tag">${item.tag}</span>
-        </div>
-      `).join('');
-      $$('.marquee-item img', track).forEach(img => attachImage(img, img.dataset.src));
-    }
-
-    /* ---------------- Gallery grid ---------------- */
     function galleryCardMarkup(item, index) {
       const isVideo = item.type === 'video';
       return `
@@ -1603,21 +1388,15 @@
       });
     }
 
-    const galleryTabsEl = document.getElementById('galleryTabs');
-    if (galleryTabsEl && document.getElementById('galleryGrid')) {
-      galleryTabsEl.addEventListener('click', (e) => {
-        const tab = e.target.closest('.gallery-tab');
-        if (!tab) return;
-        $$('.gallery-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        renderGallery(tab.dataset.filter);
-      });
+    document.getElementById('galleryTabs').addEventListener('click', (e) => {
+      const tab = e.target.closest('.gallery-tab');
+      if (!tab) return;
+      $$('.gallery-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      renderGallery(tab.dataset.filter);
+    });
 
-      renderGallery('all');
-    }
-
-    renderMosaic();
-    renderMarquee();
+    renderGallery('all');
   </script>
 </body>
 </html>
